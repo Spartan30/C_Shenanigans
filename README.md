@@ -5,8 +5,10 @@ Run make to compile all programs
 
 HelloWorld.c
   - Simple Hello World program
+
 Add.c
   - Has the user enter 2 numbers and adds them together
+
 RPS.c
   - Rock Paper Scissors game
   - User chooses rock, paper, or scissors by picking a number between 1-3
