@@ -15,6 +15,9 @@ int main() {
     int aiPickInt = 0;
     int userPickInt = 0;
     int winner = 0;
+    int numDraws = 0;
+    int numUserWins = 0;
+    int numAiWins = 0;
     char *userPickString;
     char *aiPickString;
     char playAgain = 'y';
@@ -42,14 +45,17 @@ int main() {
         switch(winner) {
             case 0:
                 printf("It's a draw!\n");
+                numDraws++;
                 break;
 
             case 1:
                 printf("You win!\n");
+                numUserWins++;
                 break;
 
             case 2:
                 printf("You lose.\n");
+                numAiWins++;
                 break;
             default:
                 printf("Something went wrong :(\n");
@@ -80,6 +86,12 @@ int main() {
                 break;
         }
     }
+
+    printf("\n");
+    printf("You won %d game(s)\n", numUserWins);
+    printf("You lost %d game(s)\n", numAiWins);
+    printf("%d game(s) ended in a draw\n", numDraws);
+    printf("\n");
 
     return 0;
 }
