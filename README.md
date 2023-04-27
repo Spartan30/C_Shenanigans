@@ -4,13 +4,13 @@ I created this repo to create some C programs to get used to writing C again.
 
 Go into one of the subfolders and run 'make run' to compile and execute the program.
 
-HelloWorld.c
+/HelloWorld
   - Simple Hello World program
 
-Add.c
+/Add
   - Has the user enter 2 numbers and adds them together
 
-RPS.c
+/RPS
   - Rock Paper Scissors game
   - User chooses rock, paper, or scissors by picking a number between 1-3
   - AI randomly picks an option
