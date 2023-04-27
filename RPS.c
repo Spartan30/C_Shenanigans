@@ -24,6 +24,7 @@ int main() {
 
     while(!quit) {
 
+        //Get User Pick
         listOptions();
         scanf("%d", &userPickInt);
 
@@ -32,12 +33,17 @@ int main() {
             continue;
         }
 
+        //Get AI Pick
         aiPickInt = getRandPick();
+
+        //Determine Winner
         winner = getWinner(userPickInt, aiPickInt);
 
+        //Conver ints to words
         userPickString = convertChoiceToString(userPickInt);
         aiPickString = convertChoiceToString(aiPickInt);
 
+        //Show results
         printf("\n");
         printf("You chose %s\n", userPickString);
         printf("AI chose %s\n", aiPickString);
@@ -62,16 +68,12 @@ int main() {
                 break;
         }
 
+        //Ask to play again
         printf("\n");
         printf("Do you want to play again? (y/n) ");
         do {
             scanf("%c", &playAgain);
         } while(playAgain != 'y' && playAgain != 'Y' && playAgain != 'n' && playAgain != 'N');
-
-
-
-        free(userPickString);
-        free(aiPickString);
 
         switch(playAgain) {
             case 'y':
@@ -85,8 +87,13 @@ int main() {
             default:
                 break;
         }
+
+        //free memory
+        free(userPickString);
+        free(aiPickString);
     }
 
+    //Show overall results
     printf("\n");
     printf("You won %d game(s)\n", numUserWins);
     printf("You lost %d game(s)\n", numAiWins);
@@ -96,6 +103,9 @@ int main() {
     return 0;
 }
 
+/*
+* Picks number between 1 and 3
+*/
 int getRandPick() {
 
     srand(time(0));
@@ -111,6 +121,11 @@ void listOptions() {
     printf("3. Scissors\n");
 }
 
+/*
+* 1 = Rock
+* 2 = Paper
+* 3 = Scissors
+*/
 char* convertChoiceToString(int choice) {
     char *word;
     switch(choice) {
@@ -140,10 +155,12 @@ char* convertChoiceToString(int choice) {
 */
 int getWinner(int userChoice, int aiChoice) {
 
+    //Draw
     if(userChoice == aiChoice) {
         return 0;
     }
 
+    //User wins scenarios
     if(userChoice == 1 && aiChoice == 3) {
         //User chose Rock, AI choise Scissors
         return 1;
@@ -157,5 +174,6 @@ int getWinner(int userChoice, int aiChoice) {
         return 1;
     }
 
+    //AI wins
     return 2;
 }
