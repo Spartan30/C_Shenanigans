@@ -2,7 +2,7 @@
 I was feeling nostalgic and wanted to get back into some C programming.
 I created this repo to create some C programs to get used to writing C again.
 
-Run make to compile all programs
+Go into one of the subfolders and run 'make run' to compile and execute the program.
 
 HelloWorld.c
   - Simple Hello World program
