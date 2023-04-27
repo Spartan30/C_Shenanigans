@@ -143,9 +143,8 @@ char* convertChoiceToString(int choice) {
             break;
         default:
             break;
-
-        return word;
     }
+    return word;
 }
 
 /*
