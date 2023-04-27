@@ -1,5 +1,6 @@
 # C_Shenanigans
-This repo is for playing around in C
+I was feeling nostalgic and wanted to get back into some C programming.
+I created this repo to create some C programs to get used to writing C again.
 
 Run make to compile all programs
 
