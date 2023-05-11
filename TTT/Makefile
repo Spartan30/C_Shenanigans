@@ -6,6 +6,10 @@ ttt: TicTacToe.c TicTacToe.h
 main: ttt Main.c
 	gcc -std=c11 -pedantic -Wall Main.c TicTacToe.o -o TTT.exe
 
+test: ttt Test.c
+	gcc -std=c11 -pedantic -Wall Test.c TicTacToe.o -o Test.exe
+	./Test.exe
+
 run: all
 	./TTT.exe
 
