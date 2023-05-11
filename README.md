@@ -28,9 +28,7 @@ Go into one of the below directories and run:
   - Positions on board are represented by an integer between 1 - 9 (inclusive)
   - Game will show which positions are available
   - Game ends when there is a winner or no more possible moves (draw)
-  - Board with positions:
-      1|2|3
-      -----
-      4|5|6
-      -----
-      7|8|9
+  - Board positions:
+     - 1|2|3
+     - 4|5|6
+     - 7|8|9
