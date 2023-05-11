@@ -17,6 +17,16 @@ RPS.c
   - Game outputs the reults of the game and asks if the user wants to play again
   - After the user ends the game a tally of wins, loses, and draws is displayed
 
-TTT.c
+Main.c
   - Tic Tac Toe game
-  - Work In Progress
+  - 2 users play a game of tic tac toe against eachother
+  - X goes first
+  - Positions on board are represented by an integer between 1 - 9 (inclusive)
+  - Game will show which positions are available
+  - Game ends when there is a winner or no more possible moves (draw)
+  - Board with positions:
+      1|2|3
+      -----
+      4|5|6
+      -----
+      7|8|9
