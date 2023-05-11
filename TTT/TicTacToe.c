@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+* Param: char value
+* Takes in a char and returns the game value, primarily used for printing the board to the screen
+* Return: char
+* '0' = ' '
+* '1' = 'X'
+* '2' = 'O'
+*/
 char getChar(char value) {
     switch(value) {
         case '0':
@@ -15,6 +23,11 @@ char getChar(char value) {
     }
 }
 
+/*
+* Param: char *board
+* Prints the board
+* Return: void
+*/
 void printBoard(char *board) {
     if(strlen(board) != 9) {
         printf("INVALID BOARD\n");
@@ -29,8 +42,11 @@ void printBoard(char *board) {
 }
 
 /*
+* Param: char *board, char value, int position
 * Position should be value from 1 - 9
 * Subtract 1 from position to convert to array position
+* Updates a game board by setting the position in the char array to the value provided
+* Return: void
 */
 void updateBoard(char *board, char value, int position) {
     if(strlen(board) != 9) {
@@ -56,7 +72,12 @@ void updateBoard(char *board, char value, int position) {
     board[position-1] = value;
 }
 
-int checkPossibleMove(char* board) {
+/*
+* Param: char *board
+* Checks if there are any moves possible
+* Return: int
+*/
+int checkPossibleMove(char *board) {
     for(int i = 0; i < strlen(board); i++) {
         if(board[i] == '0') {
             return 1;
@@ -66,7 +87,15 @@ int checkPossibleMove(char* board) {
     return 0;
 }
 
-char checkWinner(char* board) {
+/*
+* Param: char *board
+* Checks who the current winner is
+* Return: char
+* '0' - draw/no winner  yet
+* '1' - X wins
+* '2' - O wins
+*/
+char checkWinner(char *board) {
 
     for(int i = 0; i < 3; i++) {
         int rowStart = i * 3;
@@ -99,6 +128,11 @@ char checkWinner(char* board) {
     return '0';
 }
 
+/*
+* Param: char *board, int turn
+* Prints who's turn it is and the available options for the user
+* Return: void
+*/
 void printOptions(char *board, int turn) {
 
     if(turn % 2 == 0) {
@@ -121,6 +155,13 @@ void printOptions(char *board, int turn) {
 
 }
 
+/*
+* Param: char *board, int position
+* Determines if a move is valid
+* Return: int
+* 0 - invalid move
+* 1 - valid move
+*/
 int isValidMove(char *board, int position) {
     if(position < 1 || position > 9) {
         return 0;
