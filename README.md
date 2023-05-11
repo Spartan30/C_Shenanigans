@@ -16,3 +16,7 @@ RPS.c
   - AI randomly picks an option
   - Game outputs the reults of the game and asks if the user wants to play again
   - After the user ends the game a tally of wins, loses, and draws is displayed
+
+TTT.c
+  - Tic Tac Toe game
+  - Work In Progress
