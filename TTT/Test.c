@@ -27,8 +27,14 @@ int main() {
     updateBoard(board, '2', 9);
     printBoard(board);
     printf("%d\n", checkPossibleMove(board));
+    printf("%c\n", checkWinner(board));
 
     printf("\n");
+
+    printf("%c\n", checkWinner("111000000")); // row - 1
+    printf("%c\n", checkWinner("201200210")); // col - 2
+    printf("%c\n", checkWinner("201020012")); // NW to SE - 2
+    printf("%c\n", checkWinner("221010120")); // NE to SW - 1
 
     return 0;
 }
