@@ -21,7 +21,7 @@ Go into one of the below directories and run:
   - Game outputs the reults of the game and asks if the user wants to play again
   - After the user ends the game a tally of wins, loses, and draws is displayed
 
-TTT
+/TTT
   - Tic Tac Toe game
   - 2 users play a game of tic tac toe against eachother
   - X goes first
