@@ -120,3 +120,15 @@ void printOptions(char *board, int turn) {
     printf("\n");
 
 }
+
+int isValidMove(char *board, int position) {
+    if(position < 1 || position > 9) {
+        return 0;
+    }
+
+    if(board[position - 1] != '0') {
+        return 0;
+    }
+
+    return 1;
+}
