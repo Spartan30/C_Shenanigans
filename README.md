@@ -8,13 +8,13 @@ Go into one of the below directories and run:
   - 'make clean' to remove compiled files
 
 
-HelloWorld
+/HelloWorld
   - Simple Hello World program
 
-Add
+/Add
   - Has the user enter 2 numbers and adds them together
 
-RPS
+/RPS
   - Rock Paper Scissors game
   - User chooses rock, paper, or scissors by picking a number between 1-3
   - AI randomly picks an option
