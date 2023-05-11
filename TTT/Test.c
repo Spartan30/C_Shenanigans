@@ -13,6 +13,22 @@ int main() {
 
     printBoard("BAD");
     printBoard(board);
+    printf("%d\n", checkPossibleMove(board));
+
+    printf("\n");
+
+    updateBoard(board, '1', 1);
+    printBoard(board);
+    printf("%d\n", checkPossibleMove(board));
+
+    printf("\n");
+
+    updateBoard(board, '2', 5);
+    updateBoard(board, '2', 9);
+    printBoard(board);
+    printf("%d\n", checkPossibleMove(board));
+
+    printf("\n");
 
     return 0;
 }

@@ -3,5 +3,7 @@
 
 char getChar(char);
 void printBoard(char*);
+void updateBoard(char*, char, int);
+int checkPossibleMove(char*);
 
 #endif
