@@ -3,7 +3,7 @@
 
 int main() {
 
-    char board[9] = "012102210";
+    char board[10] = "012102210";
 
     printf("%c\n", getChar('0'));
     printf("%c\n", getChar('1'));
