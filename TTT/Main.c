@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include "TicTacToe.h"
 
 
 int main() {
-    
-    printf("TTT\n");
+
+    test();
 
     return 0;
 }
