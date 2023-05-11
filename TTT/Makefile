@@ -1,4 +1,6 @@
-all: Main.c
+all: main
+
+main: Main.c
 	gcc -std=c11 -pedantic -Wall Main.c -o TTT.exe
 
 run: all
