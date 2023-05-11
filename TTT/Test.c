@@ -14,12 +14,14 @@ int main() {
     printBoard("BAD");
     printBoard(board);
     printf("%d\n", checkPossibleMove(board));
+    printOptions(board, 0);
 
     printf("\n");
 
     updateBoard(board, '1', 1);
     printBoard(board);
     printf("%d\n", checkPossibleMove(board));
+    printOptions(board, 1);
 
     printf("\n");
 

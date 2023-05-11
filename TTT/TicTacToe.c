@@ -98,3 +98,25 @@ char checkWinner(char* board) {
 
     return '0';
 }
+
+void printOptions(char *board, int turn) {
+
+    if(turn % 2 == 0) {
+        printf("It is X's turn\n");
+    }
+    else {
+        printf("It is O's turn\n");
+    }
+
+    printf("Enter a number between 1-9 to place your piece\n");
+    printf("Available options are:");
+
+    for(int i = 0; i < strlen(board); i++) {
+        if(board[i] == '0') {
+            printf(" %d", (i+1));
+        }
+    }
+
+    printf("\n");
+
+}
