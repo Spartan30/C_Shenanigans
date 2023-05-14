@@ -200,7 +200,7 @@ void play(struct Results *results) {
     int position;
 
     while(checkPossibleMove(board) == 1 && checkWinner(board) == '0') {
-
+        printf("\n");
         printBoard(board);
         printOptions(board, turn);
         scanf("%d", &position);
@@ -221,6 +221,9 @@ void play(struct Results *results) {
         printf("\n");
         turn++;
     }
+
+    printf("\n");
+    printBoard(board);
 
     winner = checkWinner(board);
 
