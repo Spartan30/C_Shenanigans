@@ -15,5 +15,6 @@ char checkWinner(char*);
 void printOptions(char*, int);
 int isValidMove(char*, int);
 void printResults(struct Results*);
+void play(struct Results*);
 
 #endif
