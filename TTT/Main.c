@@ -2,14 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Results {
-    int draws;
-    int xWins;
-    int oWins;
-};
-
 void play(struct Results*);
-
 
 int main() {
     struct Results *results = (struct Results *)malloc(sizeof(struct Results));
@@ -30,22 +23,19 @@ int main() {
 
     }while(playAgain == 'y' || playAgain == 'Y');
 
-    printf("\n");
-    printf("There were %d draws\n", results->draws);
-    printf("X won %d game(s)\n", results->xWins);
-    printf("O won %d game(s)\n", results->oWins);
-    printf("\n");
+    printResults(results);
 
     free(results);
+
     return 0;
 }
 
 void play(struct Results *results) {
     char board[10] = "000000000";
-    int turn = 0;
     char currPlayer;
-    int position;
     char winner;
+    int turn = 0;
+    int position;
 
     while(checkPossibleMove(board) == 1 && checkWinner(board) == '0') {
 
