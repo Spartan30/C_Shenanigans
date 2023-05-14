@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void play(struct Results*);
-
 int main() {
     struct Results *results = (struct Results *)malloc(sizeof(struct Results));
     char playAgain = ' ';
