@@ -1,54 +1,31 @@
 #include "TicTacToe.h"
 #include <stdio.h>
+#include <stdlib.h>
 
+void play(struct Results*);
 
 int main() {
+    struct Results *results = (struct Results *)malloc(sizeof(struct Results));
+    char playAgain = ' ';
 
-    char board[10] = "000000000";
-    int turn = 0;
-    char currPlayer;
-    int position;
-    char winner;
+    results->draws = 0;
+    results->xWins = 0;
+    results->oWins = 0;
 
-    while(checkPossibleMove(board) == 1 && checkWinner(board) == '0') {
+    do {
 
-        printBoard(board);
-        printOptions(board, turn);
-        scanf("%d", &position);
+        play(results);
 
-        if(isValidMove(board, position) != 1) {
-            printf("INVALID MOVE\n");
-            continue;
-        }
+        printf("Do you want to play again? (y/n)\n");
+        do {
+            scanf("%c", &playAgain);
+        }while(playAgain != 'y' && playAgain != 'Y' && playAgain != 'n' && playAgain != 'N');
 
-        if(turn % 2 == 0) {
-            currPlayer = '1';
-        }
-        else {
-            currPlayer = '2';
-        }
+    }while(playAgain == 'y' || playAgain == 'Y');
 
-        updateBoard(board, currPlayer, position);
-        printf("\n");
-        turn++;
-    }
+    printResults(results);
 
-    winner = checkWinner(board);
-
-    switch(winner) {
-        case '0':
-            printf("It's a draw!\n");
-            break;
-        case '1':
-            printf("X wins!\n");
-            break;
-        case '2':
-            printf("O wins!\n");
-            break;
-        default:
-            printf("Something went wrong :(\n");
-            break;
-    }
+    free(results);
 
     return 0;
 }
