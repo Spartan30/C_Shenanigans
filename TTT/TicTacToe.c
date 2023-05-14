@@ -174,7 +174,12 @@ int isValidMove(char *board, int position) {
     return 1;
 }
 
-void printResults(struct Results* results) {
+/*
+* Param: struct Results *results
+* Prints out the results (values in struct)
+* Return: void
+*/
+void printResults(struct Results *results) {
     printf("\n");
     printf("There were %d draws\n", results->draws);
     printf("X won %d game(s)\n", results->xWins);
